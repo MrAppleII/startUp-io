@@ -1,7 +1,7 @@
 function generateName(){
-    var markets       = ["retail","marketing","Dating","video","coffee","travel"];
-    var technologies  = ["AI","Blockchain","Machine Learning","Mobile"];
-    var olderStartups = ["Uber","Airbnb","Netflix"];
+    var markets       = ["retail", "marketing", "Dating", "video", "coffee", "travel",  "aerospace",  "engineering",  "tech",  "manufacuturing"];
+    var technologies  = ["AI", "Blockchain", "Machine Learning", "Mobile", "Travel", "Ride Sharing",  "Programming",  "Making",  "Hacking",  "Banking"];
+    var olderStartups = ["Uber", "Airbnb", "Netflix", "Napster", "Salesforce", "Wall Street", "Apple"];
 
     var number = Math.floor(Math.random() * 2); // returns a random integer from 0 to 2
 
