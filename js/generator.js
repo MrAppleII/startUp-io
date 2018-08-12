@@ -4,7 +4,7 @@ function generateName(){
     var olderStartups = ["Uber","Airbnb","Netflix"];
 
     var number = Math.floor(Math.random() * 2); // returns a random integer from 0 to 2
-    
+
 
     var marketGenNumber = Math.floor(Math.random() * (markets.length)); // returns a random integer from 0 to length of array
     console.log (marketGenNumber);
@@ -23,12 +23,12 @@ function generateName(){
     }
 
     if(number == 1){
-        startupIdea = "Its " + techToPlug + " for the " + marketToPlug + ".";
+        startupIdea = "It is " + techToPlug + " for " + marketToPlug + " space.";
     }
 
 
 if(number == 2){
-    startupIdea  = "The " + existingStartupToPlug + " for " + marketToPlug + ".";
+    startupIdea  = "The " + existingStartupToPlug + " of " + marketToPlug + ".";
 }
 
 return startupIdea;
