@@ -1,3 +1,6 @@
+function generateName(){
+
+
 var markets       = ["retail","marketing","Dating","video","coffee","travel"];
 var technologies  = ["AI","Blockchain","Machine Learning","Mobile"];
 var olderStartups = ["Uber","Airbnb","Netflix"];
@@ -25,4 +28,7 @@ if(number == 1){
 
 if(number == 2){
     startupIdea  = "The " + existingStartupToPlug + " for " + marketToPlug + ".";
+}
+
+return startupIdea;
 }
