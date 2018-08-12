@@ -23,7 +23,7 @@ if(number == 0){
 }
 
 if(number == 1){
-    startupIdea = "Its " + techToPlug + " for the " + marketToPlug + ".";
+    startupIdea = "Its " + techToPlug + " for " + marketToPlug + ".";
 }
 
 if(number == 2){
