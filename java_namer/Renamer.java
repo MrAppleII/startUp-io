@@ -1,9 +1,9 @@
-package namer;
+package java_namer;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import  namer.*;
+import  java_namer.*;
 
 public class Renamer {
     static StartupName name = null;

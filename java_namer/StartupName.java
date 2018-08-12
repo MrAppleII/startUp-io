@@ -1,8 +1,8 @@
-package namer;
+package java_namer;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import  namer.*;
+import  java_namer.*;
 
 public class StartupName {
     private String startupName = null;
