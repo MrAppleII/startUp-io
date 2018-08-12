@@ -4,14 +4,16 @@ function generateName(){
     var olderStartups = ["Uber","Airbnb","Netflix"];
 
     var number = Math.floor(Math.random() * 2); // returns a random integer from 0 to 2
+    
 
-    var marketGenNumber = Math.floor(Math.random() * (markets.length-1)); // returns a random integer from 0 to length of array
+    var marketGenNumber = Math.floor(Math.random() * (markets.length)); // returns a random integer from 0 to length of array
+    console.log (marketGenNumber);
     var marketToPlug    = markets[marketGenNumber];                         //set the string to the one from the array using the random number
 
-    var techGenNumber = Math.floor(Math.random() * (technologies.length-1)); // returns a random integer from 0 to length of array
+    var techGenNumber = Math.floor(Math.random() * (technologies.length)); // returns a random integer from 0 to length of array
     var techToPlug    = technologies[techGenNumber];                           //set the string to the one from the array using the random number
 
-    var existingStartupGenNumber = Math.floor(Math.random() * (olderStartups.length-1)); // returns a random integer from 0 to length of array
+    var existingStartupGenNumber = Math.floor(Math.random() * (olderStartups.length)); // returns a random integer from 0 to length of array
     var existingStartupToPlug    = technologies[existingStartupGenNumber];                 //set the string to the one from the array using the random number
 
     var startupIdea = "";
