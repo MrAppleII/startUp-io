@@ -9,17 +9,19 @@ public class Renamer {
     static StartupName name = null;
 
     public static void main(String[] args) {
-        for (String arg : args) {
-            name = new StartupName(arg);
-            System.out.println(name.toString());
+        if (args.length > 0) {
+            for (String arg : args) {
+                name = new StartupName(arg);
+                System.out.println(name.toString());
+            }
+        } else {
+            Scanner input = new Scanner(System.in);
+            while (input.hasNext()) {
+                String line = input.nextLine();
+                System.out.print(line + " | ");
+                System.out.println(new StartupName(line));
+            }
+            input.close();
         }
-
-        Scanner input = new Scanner(System.in);
-        while (input.hasNext()) {
-            String line = input.nextLine();
-            System.out.print(line + " | ");
-            System.out.println(new StartupName(line));
-        }
-        input.close();
     }
 }

@@ -1,11 +1,10 @@
 package java_namer;
-import java.util.Random;
-import java.util.stream.IntStream;
-
 import  java_namer.*;
+import java.util.Random;
 
 public class StartupName {
     private String startupName = null;
+    private static Random random = new Random();
 
     StartupName(String normalName) {
         startupName = transform(normalName);
@@ -17,20 +16,19 @@ public class StartupName {
 
     private String transform(String input) {
         String output = "";
-        
         char[] chars = input.toCharArray();
 
-        output += chars[0];
-
-        // remove vowels from middle of word
-        for (int i = 1; i < chars.length-1; i++) {
-            if (!isVowel(chars[i]))
-                output += chars[i];
+        
+        output += chars[0]; // copy beginning chars
+        if (chars.length > 1) {
+            for (int i = 1; i < chars.length-1; i++) { // remove vowels from middle of word
+                if (!isVowel(chars[i]))
+                    output += chars[i];
+            }
+            output += chars[chars.length - 1];
         }
 
-        output += chars[chars.length - 1];
-
-        // if it doesn't end in 'r', then append ".io"
+        // if it doesn't end in 'r', then append something
         if (!output.endsWith("r")) {
             output += randSuffix();
         }
@@ -57,7 +55,6 @@ public class StartupName {
 
     private String randSuffix() {
         String[] suffixes = {"", ".io", ".ly", ".tv", "athon"};
-        Random random = new Random();
         return suffixes[random.nextInt(suffixes.length)];
     }
 }
